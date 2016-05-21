@@ -14,6 +14,7 @@
 		9F6510E01CEA9DDC008C4553 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6510DE1CEA9DDC008C4553 /* Main.storyboard */; };
 		9F6510EB1CEA9DDC008C4553 /* LockItUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6510EA1CEA9DDC008C4553 /* LockItUpTests.m */; };
 		9F6510F61CEA9DDD008C4553 /* LockItUpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6510F51CEA9DDD008C4553 /* LockItUpUITests.m */; };
+		9F9BDE3C1CF00C0F00F69AF9 /* LockedUp.app in Resources */ = {isa = PBXBuildFile; fileRef = 9F9BDE3B1CF00C0F00F69AF9 /* LockedUp.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9F6510F11CEA9DDD008C4553 /* LockItUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockItUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6510F51CEA9DDD008C4553 /* LockItUpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockItUpUITests.m; sourceTree = "<group>"; };
 		9F6510F71CEA9DDD008C4553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9BDE3B1CF00C0F00F69AF9 /* LockedUp.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = LockedUp.app; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		9F6510D61CEA9DDB008C4553 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F9BDE3B1CF00C0F00F69AF9 /* LockedUp.app */,
 				9F6510D71CEA9DDB008C4553 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -242,6 +245,7 @@
 			files = (
 				9F6510DD1CEA9DDB008C4553 /* Assets.xcassets in Resources */,
 				9F6510E01CEA9DDC008C4553 /* Main.storyboard in Resources */,
+				9F9BDE3C1CF00C0F00F69AF9 /* LockedUp.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +493,7 @@
 				9F6510FC1CEA9DDD008C4553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F6510FD1CEA9DDD008C4553 /* Build configuration list for PBXNativeTarget "LockItUpTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				9F6510FF1CEA9DDD008C4553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F6511001CEA9DDD008C4553 /* Build configuration list for PBXNativeTarget "LockItUpUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				9F6511021CEA9DDD008C4553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
