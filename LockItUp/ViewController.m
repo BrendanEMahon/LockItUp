@@ -53,6 +53,8 @@
 
 }
 
+/IS THIS HERE
+
 - (IBAction)sendFileButtonAction:(id)sender{
     
     folderName = folderNameTextField.stringValue;
