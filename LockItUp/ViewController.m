@@ -53,8 +53,6 @@
 
 }
 
-/IS THIS HERE
-
 - (IBAction)sendFileButtonAction:(id)sender{
     
     folderName = folderNameTextField.stringValue;
@@ -100,26 +98,18 @@
 
 }
 
--(void)moveAppleScriptApplication {
-    NSLog(@"Move Application");
-    NSURL *bankURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Bank" ofType:@"app"]];
-    NSLog(@"%@",bankURL.absoluteString);
-    NSError *error;
-    [[NSFileManager defaultManager] copyItemAtURL:bankURL toURL:[NSURL URLWithString:@"file:///Users/brutus/Desktop/Bank.app"] error:&error];
-    NSLog(@"%@",error);
-    NSLog(@"Application Moved");
-}
-
--(void)setFolderIcon {
-
-    NSImage *iconImage = [[NSImage alloc] initWithContentsOfFile:@"/Users/brutus/Desktop/Yosemite\Lock\Folder.icns"];
-    BOOL didSetIcon = [[NSWorkspace sharedWorkspace] setIcon:iconImage forFile:@"/Users/brutus/Desktop/trashimage.sparsebundle" options:0];
-    NSLog(@"%d", didSetIcon);
-
-}
-
 -(void)theAppleScript{
-
+    
+    NSString *filePathPlist = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/LockedUp.app/Contents/Resources/Scripts/Locations.plist"];
+    [[NSFileManager defaultManager] createFileAtPath:filePathPlist contents:nil attributes:nil];
+    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] init];
+    [plistDict setValue:[pathControl.stringValue stringByAppendingString:@".sparsebundle"] forKey:@"DiskPath"];
+    [plistDict setValue:folderName forKey:@"DiskName"];
+    [plistDict writeToFile:filePathPlist atomically: YES];
+    
+/*
+    //set UnixPath to POSIX path of ((path to me as text) & "::")
+    
     NSString *headerOne = [[@"property diskname1 : \"" stringByAppendingString:folderName] stringByAppendingString:@"\"\r"];
     NSString *headerTwo = [[@"property diskpath1 : \"" stringByAppendingString:pathControl.stringValue] stringByAppendingString:@".sparsebundle\"\r"];
     
@@ -137,11 +127,21 @@
     NSString *filePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/LockedUp/Contents/Resources/Scripts/main.scpt"];
     [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
     [[complete dataUsingEncoding:NSUTF8StringEncoding] writeToFile:filePath atomically:YES];
-    NSString *filePath2 = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/LockedUp"];
+
+      */
+    NSString *filePath2 = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/LockedUp.app"];
     NSError *error2;
-    NSString *newPath = [pathControl.stringValue stringByAppendingString:@""];
-                         
+    //NSString *newPath = [[pathControl.stringValue stringByAppendingString:folderName] stringByAppendingString:@".app"];
+    NSString *newPath = [pathControl.stringValue stringByAppendingString:@".app"];
+
+
     [[NSFileManager defaultManager] copyItemAtPath:filePath2 toPath:newPath error:&error2];
+    
+    /*
+    NSImage *iconImage = [[NSImage alloc] initWithContentsOfFile:[filePath2 stringByAppendingString:@"/Contents/Resources/Lock.icns"]];
+    NSLog(@"%@",[filePath2 stringByAppendingString:@"/Contents/Resources/Lock.icns"]);
+    BOOL didSetIcon = [[NSWorkspace sharedWorkspace] setIcon:iconImage forFile:newPath options:0];
+     */
 }
 
 @end
