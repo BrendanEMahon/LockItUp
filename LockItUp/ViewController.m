@@ -136,7 +136,7 @@
 
 
     [[NSFileManager defaultManager] copyItemAtPath:filePath2 toPath:newPath error:&error2];
-    
+    //
     /*
     NSImage *iconImage = [[NSImage alloc] initWithContentsOfFile:[filePath2 stringByAppendingString:@"/Contents/Resources/Lock.icns"]];
     NSLog(@"%@",[filePath2 stringByAppendingString:@"/Contents/Resources/Lock.icns"]);
