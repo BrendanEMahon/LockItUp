@@ -12,10 +12,13 @@
 
 @property (nonatomic, retain) IBOutlet NSTextField *folderNameTextField;
 @property (nonatomic, retain) IBOutlet NSTextField *remainingSpace;
-@property (nonatomic, retain) IBOutlet NSSlider *sizeSlider;
-@property (nonatomic, retain) IBOutlet NSPathControl *pathControl;
 @property (nonatomic, retain) NSString *folderName;
 @property (nonatomic, retain) NSNumber *folderSize;
+@property (nonatomic, retain) IBOutlet NSSecureTextField *secureTextOne;
+@property (nonatomic, retain) IBOutlet NSSecureTextField *secureTextTwo;
+@property (nonatomic, retain) IBOutlet NSButton *folderButton;
+@property (nonatomic, retain) NSString *folderPathString;
+@property (nonatomic, retain) IBOutlet NSProgressIndicator *progressIndicator;
 
 - (IBAction)sendFileButtonAction:(id)sender;
 - (IBAction)updateFolderSizeLabel:(id)sender;
