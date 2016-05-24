@@ -670,28 +670,11 @@
             <objects>
                 <viewController title="Lock It Up!" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="272" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="143"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7cu-ef-dcE">
-                                <rect key="frame" x="18" y="132" width="77" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Folder:" id="EuD-Dy-j0P">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" id="X5o-8A-5oE">
-                                <rect key="frame" x="100" y="129" width="152" height="22"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="Enter New Folder Name" drawsBackground="YES" id="kGd-8b-TCr">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Nl4-8V-vFF">
-                                <rect key="frame" x="18" y="104" width="102" height="17"/>
+                                <rect key="frame" x="18" y="106" width="102" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Password:" id="FdJ-DU-2WW">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -699,7 +682,7 @@
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" id="j01-v3-ZtK">
-                                <rect key="frame" x="129" y="99" width="123" height="22"/>
+                                <rect key="frame" x="129" y="101" width="123" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Enter Password" drawsBackground="YES" usesSingleLineMode="YES" id="KQk-i2-XWj">
                                     <font key="font" metaFont="system"/>
@@ -711,7 +694,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Ewc-XM-iE3">
-                                <rect key="frame" x="18" y="72" width="105" height="17"/>
+                                <rect key="frame" x="18" y="74" width="105" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Verify Password:" id="dvu-D5-Rx9">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -719,7 +702,7 @@
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" id="rwk-Tz-HeV">
-                                <rect key="frame" x="129" y="69" width="123" height="22"/>
+                                <rect key="frame" x="129" y="71" width="123" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Enter Password" drawsBackground="YES" usesSingleLineMode="YES" id="wdx-IB-oXW">
                                     <font key="font" metaFont="system"/>
@@ -731,7 +714,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="LJq-O3-SwI">
-                                <rect key="frame" x="128" y="45" width="16" height="16"/>
+                                <rect key="frame" x="128" y="47" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <button verticalHuggingPriority="750" id="6ae-Rw-ttw">
@@ -749,7 +732,6 @@
                     </view>
                     <connections>
                         <outlet property="folderButton" destination="6ae-Rw-ttw" id="DIf-gI-yAx"/>
-                        <outlet property="folderNameTextField" destination="X5o-8A-5oE" id="mxL-Pm-BCR"/>
                         <outlet property="progressIndicator" destination="LJq-O3-SwI" id="omR-aM-SZw"/>
                         <outlet property="secureTextOne" destination="j01-v3-ZtK" id="8sl-4k-b03"/>
                         <outlet property="secureTextTwo" destination="rwk-Tz-HeV" id="YMa-MQ-IOj"/>
@@ -757,7 +739,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="605.5"/>
+            <point key="canvasLocation" x="-29" y="591.5"/>
         </scene>
     </scenes>
 </document>
